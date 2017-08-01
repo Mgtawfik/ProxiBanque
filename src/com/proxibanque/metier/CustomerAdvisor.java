@@ -3,6 +3,8 @@ package com.proxibanque.metier;
 import java.util.Set;
 import com.proxibanque.service.Service;;
 
+// richard tran <tran_richard_2001@yahoo.fr>
+
 public class CustomerAdvisor implements Service {
 	
 	protected String firstName;
