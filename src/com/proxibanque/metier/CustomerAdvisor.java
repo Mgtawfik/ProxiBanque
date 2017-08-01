@@ -1,8 +1,9 @@
 package com.proxibanque.metier;
 
 import java.util.Set;
+import com.proxibanque.service.Service;;
 
-public class CustomerAdvisor {
+public class CustomerAdvisor implements Service {
 	
 	protected String firstName;
 	protected String name;
@@ -12,15 +13,30 @@ public class CustomerAdvisor {
 	private Manager manager;
 	private Branch branch;
 	private Set<Customer> customers;
-	private Set<Account> accounts;
+	private Set<Account> account;
 	
 	
 	// Méthodes de la classe
 	
-	public void transferMoney() {
+	public void transferMoney(int num1,int num2,float mt) {
+		if(mt<0) {
+			System.out.println("montant négatif !!!");
+			return;
+			}
+		else{
+			for(int i=0; i<account.size();i++) {
+				if(account.get(i).number = num1) {
+					for(int j=0; i<account.size();j++) {
+						if(account.get(j).number = num2) {
+							account.get(j).balance += mt ;
+							account.get(i).balance -= mt ;
+						}
+					}
+				}
+			}
+		}// fin else
+	}// fin transferMoney()
 		
-		
-	}
 	
 	public void simulateCredit() {	
 	}
