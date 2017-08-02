@@ -1,31 +1,85 @@
 package com.proxibanque.metier;
 
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Customer {
 
 	// Attributs
 	
+	protected String name;
+	protected String firstname;
 	protected String adress;
 	protected short zipcode;
 	protected String city;
 	protected short phoneNumber;
 	
+	// Associations
 	
+	protected Map<Integer, Account> accounts;
+	protected  Map<Integer, BankingCard> bankingcards;
+	protected CustomerAdvisor customerAdvisor;
+	
+
+	
+	// Constructeur
+
+	public Customer(String name, String firstname, String adress, short zipcode, String city, short phoneNumber,CustomerAdvisor customerAdvisor) {
+		this();
+		this.adress = adress;
+		this.zipcode = zipcode;
+		this.city = city;
+		this.phoneNumber = phoneNumber;
+		this.customerAdvisor = customerAdvisor;
+	}
+	
+	
+	public Customer() {
+		super();
+		this.accounts = new HashMap<Integer,Account>() ;
+		this.bankingcards = new HashMap<Integer,BankingCard>() ;
+	}
+
+
 	// toString
 	@Override
 	public String toString() {
-		return "Customer [adress=" + adress + ", zipcode=" + zipcode + ", city=" + city + ", phoneNumber=" + phoneNumber
+		return "Customer [name=" + name + ", firstname=" + firstname + ", adress=" + adress + ", zipcode=" + zipcode + ", city=" + city + ", phoneNumber=" + phoneNumber
 				+ ", accounts=" + accounts + ", bankingcards=" + bankingcards + ", customerAdvisor=" + customerAdvisor
 				+ "]";
+	}
+	
+	// Méthode
+	
+	public void addAccount(int numero, Account compte) {
+		accounts.put(numero, compte);
 	}
 	
 	
 	// Accesseurs 
 
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
 	public String getAdress() {
 		return adress;
 	}
+
 	public void setAdress(String adress) {
 		this.adress = adress;
 	}
@@ -47,47 +101,30 @@ public class Customer {
 	public void setPhoneNumber(short phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public Collection<Account> getAccounts() {
-		return accounts;
-	}
-	public void setAccounts(Collection<Account> accounts) {
-		this.accounts = accounts;
-	}
-	public Collection<BankingCard> getBankingcards() {
-		return bankingcards;
-	}
-	public void setBankingcards(Collection<BankingCard> bankingcards) {
-		this.bankingcards = bankingcards;
-	}
+	
+	
 	public CustomerAdvisor getCustomerAdvisor() {
 		return customerAdvisor;
 	}
 	public void setCustomerAdvisor(CustomerAdvisor customerAdvisor) {
 		this.customerAdvisor = customerAdvisor;
 	}
-	
-	
-	// Constructeur
 
-	public Customer(String adress, short zipcode, String city, short phoneNumber, Collection<Account> accounts,
-			Collection<BankingCard> bankingcards, CustomerAdvisor customerAdvisor) {
-		super();
-		this.adress = adress;
-		this.zipcode = zipcode;
-		this.city = city;
-		this.phoneNumber = phoneNumber;
+	public Map<Integer, Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(Map<Integer, Account> accounts) {
 		this.accounts = accounts;
+	}
+
+	public Map<Integer, BankingCard> getBankingcards() {
+		return bankingcards;
+	}
+
+	public void setBankingcards(Map<Integer, BankingCard> bankingcards) {
 		this.bankingcards = bankingcards;
-		this.customerAdvisor = customerAdvisor;
 	}
 	
-	
-	// Associations
-	
-	protected Collection<Account> accounts;
-	protected Collection<BankingCard> bankingcards;
-	protected CustomerAdvisor customerAdvisor;
-	
 
-	
 }

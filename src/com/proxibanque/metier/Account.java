@@ -1,13 +1,11 @@
 package com.proxibanque.metier;
 
-import java.util.Date;
-
 public class Account {
 	
 	
 	// Attributs
 	protected int number;
-	protected Date creationDate;
+	protected String creationDate;
 	protected float balance;
 	protected int overdraft;
 	
@@ -27,11 +25,11 @@ public class Account {
 		this.number = number;
 	}
 
-	public Date getCreationDate() {
+	public String getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(Date creationDate) {
+	public void setCreationDate(String creationDate) {
 		this.creationDate = creationDate;
 	}
 
@@ -92,8 +90,21 @@ public class Account {
 	}
 
 	// Constructeur
-	public Account(int number, Date creationDate, float balance, int overdraft, BankingCard bankingCard,
+	public Account(int number, String creationDate, float balance, int overdraft, BankingCard bankingCard,
 			Customer customer, CustomerAdvisor customerAdvisor, ProxiBankSI proxibanksi) {
+		super();
+		this.number = number;
+		this.creationDate = creationDate;
+		this.balance = balance;
+		this.overdraft = overdraft;
+		this.bankingCard = bankingCard;
+		this.customer = customer;
+		this.customerAdvisor = customerAdvisor;
+		this.proxibanksi = proxibanksi;
+	}
+	
+	public Account(int number, String creationDate, float balance, int overdraft, BankingCard bankingCard,
+			HighNetWorthIndividual highnetworthindividual, CustomerAdvisor customerAdvisor, ProxiBankSI proxibanksi) {
 		super();
 		this.number = number;
 		this.creationDate = creationDate;
@@ -122,13 +133,12 @@ public class Account {
 		}
 	}
 	
-	public void retirer (float mt) {
+	public void retirer (int mt) {
 		if (mt <0) {
 			System.out.println("Cette opération est impossible");
 		}
 		else {
 			balance = balance - mt;
-			System.out.println("Votre retrait de " + mt + " a bien été pris en compte. Le nouveau solde de votre compte est de " + balance + " euros.");
 		}
 }
 }
