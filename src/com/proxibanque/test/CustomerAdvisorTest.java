@@ -1,9 +1,15 @@
-package com.proxibanque.metier;
+package com.proxibanque.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.proxibanque.metier.Account;
+import com.proxibanque.metier.BankingCard;
+import com.proxibanque.metier.Customer;
+import com.proxibanque.metier.CustomerAdvisor;
+import com.proxibanque.metier.ProxiBankSI;
 
 public class CustomerAdvisorTest {
 
