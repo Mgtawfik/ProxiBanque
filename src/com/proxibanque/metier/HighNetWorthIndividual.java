@@ -2,11 +2,14 @@ package com.proxibanque.metier;
 
 import java.util.Hashtable;
 
+<<<<<<< HEAD
 /**
  * classe Client Fortuné
  * @author adminl
  *
  */
+=======
+>>>>>>> branch 'master' of https://github.com/Mgtawfik/ProxiBanque.git
 
 public class HighNetWorthIndividual extends Customer {
 	
@@ -38,6 +41,7 @@ public class HighNetWorthIndividual extends Customer {
  * @param qtteaction
  */
 	
+<<<<<<< HEAD
 		
 		/**
 		 * méthode de placement (achat d'une quantité d'une action; action avec un cout unitaire; le tout sur une place boursière connue)
@@ -47,6 +51,8 @@ public class HighNetWorthIndividual extends Customer {
 		 * @param prixaction
 		 * @param qtteaction
 		 */
+=======
+>>>>>>> branch 'master' of https://github.com/Mgtawfik/ProxiBanque.git
 	// Méthodes associées
 	public void investMoney(int number, String place, String action, int prixaction, int qtteaction) {
 		int mt = prixaction * qtteaction;

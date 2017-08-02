@@ -12,11 +12,15 @@ import com.proxibanque.metier.CustomerAdvisor;
 import com.proxibanque.metier.HighNetWorthIndividual;
 import com.proxibanque.metier.ProxiBankSI;
 
+<<<<<<< HEAD
 /**
  * classe de lancement du Main programme
  * @author adminl
  *
  */
+=======
+
+>>>>>>> branch 'master' of https://github.com/Mgtawfik/ProxiBanque.git
 public class Main {
 
 	public static void main(String[] args) {

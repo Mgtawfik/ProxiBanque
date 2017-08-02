@@ -1,5 +1,6 @@
 package com.proxibanque.metier;
 
+<<<<<<< HEAD
 
 /**
  * classe Compte bancaire (attributs : numero, dateCreation, solde, decouvert)
@@ -7,6 +8,8 @@ package com.proxibanque.metier;
  *
  */
 
+=======
+>>>>>>> branch 'master' of https://github.com/Mgtawfik/ProxiBanque.git
 public class Account {
 	
 	// Attributs
@@ -143,12 +146,15 @@ public class Account {
 		}
 	}
 	
+<<<<<<< HEAD
 	
 	
 	/**
 	 * méthode de retrait (débiter) sur un compte
 	 * @param mt
 	 */
+=======
+>>>>>>> branch 'master' of https://github.com/Mgtawfik/ProxiBanque.git
 	public void retirer (int mt) {
 		if (mt <0) {
 			System.out.println("Cette opération est impossible");

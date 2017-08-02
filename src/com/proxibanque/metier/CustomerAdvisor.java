@@ -7,12 +7,15 @@ import java.util.Set;
 
 import com.proxibanque.dao.CustomerJDBC;
 
+<<<<<<< HEAD
 /**
  * classe Conseiller Client
  * @author adminl
  *
  */
 
+=======
+>>>>>>> branch 'master' of https://github.com/Mgtawfik/ProxiBanque.git
 public class CustomerAdvisor {
 	protected String firstName;
 	protected String name;
@@ -61,12 +64,15 @@ public class CustomerAdvisor {
 	
 		// Transférer Argent
 	
+<<<<<<< HEAD
 	/**
 	 * méthode virement de compte 1 à compte 2
 	 * @param num1
 	 * @param num2
 	 * @param d
 	 */
+=======
+>>>>>>> branch 'master' of https://github.com/Mgtawfik/ProxiBanque.git
 	public void transferMoney(int num1, int num2, double d) {
 		if (d<0) {
 			System.out.println("Erreur montant du transfert. Veuillez saisir un montant positif.");
