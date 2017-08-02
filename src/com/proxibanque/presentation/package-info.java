@@ -1,7 +1,6 @@
+
 /**
- * 
- */
-/**
+ * package du "Main programme" de l'application "ProxiBanque"
  * @author adminl
  *
  */
